@@ -1,15 +1,9 @@
 import React, { useState, useRef } from 'react';
 
-function Player() {
+function Player({ selectedSong }) {
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
   const audioRef = useRef(null);
-
-  const sampleSong = {
-    title: 'Sample Song',
-    artist: 'Sample Artist',
-    audioUrl: 'url_to_audio_sample',
-  };
 
   const togglePlay = () => {
     if (isPlaying) {
@@ -24,14 +18,19 @@ function Player() {
     setCurrentTime(audioRef.current.currentTime);
   };
 
+  const handleLoadedMetadata = () => {
+    setCurrentTime(0);
+  };
+
   return (
     <div className="bg-white p-4 shadow-md mt-4">
-      <h2 className="text-lg font-semibold mb-2">{sampleSong.title}</h2>
-      <p className="text-gray-600 mb-4">{sampleSong.artist}</p>
+      <h2 className="text-lg font-semibold mb-2">{selectedSong.title}</h2>
+      <p className="text-gray-600 mb-4">{selectedSong.artist}</p>
       <audio
         ref={audioRef}
-        src={sampleSong.audioUrl}
+        src={selectedSong.audioUrl}
         onTimeUpdate={handleTimeUpdate}
+        onLoadedMetadata={handleLoadedMetadata} // Add this line
       />
       <div className="flex items-center justify-center">
         <button
@@ -44,7 +43,13 @@ function Player() {
           <div className="bg-gray-300 h-2 relative">
             <div
               className="bg-blue-500 h-2 absolute"
-              style={{ width: `${(currentTime / audioRef.current.duration) * 100}%` }}
+              style={{
+                width: `${
+                  audioRef.current.duration
+                    ? (currentTime / audioRef.current.duration) * 100
+                    : 0
+                }%`,
+              }}
             ></div>
           </div>
         </div>
