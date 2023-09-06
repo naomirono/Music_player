@@ -1,4 +1,3 @@
-// components/SongList.js
 import React from 'react';
 import SongCard from './SongCard';
 
