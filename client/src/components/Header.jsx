@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaUserCircle } from 'react-icons/fa';
 
 const Header = () => {
   return (
@@ -15,12 +16,10 @@ const Header = () => {
           <div className="flex items-center space-x-2">
             <input
               type="text"
-              className="border border-gray-300 px-2 py-1 rounded"
+              className="border border-gray-300 px-2 py-1 rounded mr-6"
               placeholder="Search..."
             />
-            <div className="text-turquoise-500">
-              <i className="fas fa-user-circle text-xl"></i>
-            </div>
+            
             <button className="bg-turquoise-500 border border-[#4DB6AC] text-white px-3 py-1 rounded">Sign Up</button>
             <button className="bg-turquoise-500 border border-[#4DB6AC] text-white px-3 py-1 rounded">Login</button>
           </div>
