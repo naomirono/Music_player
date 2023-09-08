@@ -1,12 +1,16 @@
 import React from 'react';
-import { FaUserCircle } from 'react-icons/fa';
+import musicIcon from '../assets/music1.png'
 
 const Header = () => {
   return (
     <nav className="bg-gray-800 p-4 text-white">
       <div className="container mx-auto">
         <div className="flex justify-between items-center">
+        <div className="flex items-center">
+          <img src={musicIcon} alt="Music Icon" className="w-8 h-8 mr-2" />
           <div className="text-2xl font-bold">Music Player</div>
+        </div>
+
           <div className="space-x-4">
             <a href="#" className="text-white hover:text-turquoise-500">Home</a>
             <a href="#" className="text-white hover:text-turquoise-500">Library</a>
