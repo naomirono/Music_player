@@ -18,7 +18,7 @@ const TopBar = () => {
         </div>
         <input
           type="text"
-          placeholder="Search..."
+          placeholder="Search Artist, Albums, Songs..."
           className="bg-gray-700 text-white p-2 pl-10 rounded-3xl w-[600px]"
           onChange={handleTyping}
         />
