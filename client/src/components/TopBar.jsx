@@ -23,8 +23,8 @@ const TopBar = () => {
           onChange={handleTyping}
         />
       </div>
-      <div className="flex items-center">
-        <button className="bg-turquoise-500 border border-[#4DB6AC] text-white px-3 py-1 rounded mr-2">Sign Up</button>
+      <div className="flex items-center mr-6">
+        <button className="bg-turquoise-500 border border-[#4DB6AC] text-white px-3 py-1 rounded mr-3">Sign Up</button>
         <button className="bg-turquoise-500 border border-[#4DB6AC] text-white px-3 py-1 rounded">Login</button>
       </div>
     </div>
