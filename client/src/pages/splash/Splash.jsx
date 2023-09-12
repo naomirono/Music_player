@@ -5,7 +5,7 @@ const Splash = () => {
   return (
     <div className="h-screen flex flex-col justify-center items-center bg-[#3f51b5]">
     <img src={logo} alt="Logo" className="mb-4" style={{ width: '200px' }} />
-    <h1 className="text-5xl font-bold text-white mb-8">Music Player</h1>
+    <h1 className="text-5xl font-bold text-white mb-8">TuneHub</h1>
   </div>
   );
 };
