@@ -1,4 +1,3 @@
-// components/SongCard.js
 import React from 'react';
 
 function SongCard({ song, onSongSelect }) {
