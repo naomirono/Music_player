@@ -11,7 +11,7 @@ const Sidebar = () => {
       <div className="flex flex-col items-start">
       <div className="flex items-center mb-6">
           <img src={musicIcon} alt="Music Icon" className="w-10 h-10 mr-2" />
-          <div className="text-2xl font-bold ">TuneHub</div>
+          <div className="text-2xl font-bold "><span className='text-turquoise-500'>Tune</span>Hub</div>
         </div>
         
         <div className="text-lg font-bold mb-2 items-start">LIBRARY</div>
