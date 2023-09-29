@@ -9,7 +9,7 @@ const TopBar = () => {
   };
 
   return (
-    <div className="bg-[#081B4B] p-4 flex justify-between items-center">
+    <div className="bg-gray-800 p-4 flex justify-between items-center">
       <div className="relative flex items-center ml-60">
         <div className="absolute left-0 pl-3 top-1/2 transform -translate-y-1/2 text-white">
            <div className={isTyping ? 'bg-turquoise-500 p-1 rounded-full' : ''}>
