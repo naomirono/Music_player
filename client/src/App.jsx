@@ -7,11 +7,10 @@ import Hero from './components/Hero';
 
 
 function App() {
-  const [selectedSong, setSelectedSong] = useState(null); // or initialize with a default song
 
   return (
-    <div className="bg-gray-100 min-h-screen">
-      {/* <Splash/> */}
+    <div className="bg-gray-800 min-h-screen">
+      {/* <Splash/>  */}
       <Sidebar/>
       <TopBar/>
       <Hero/>
